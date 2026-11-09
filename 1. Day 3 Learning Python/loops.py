@@ -1,3 +1,5 @@
+import random
+
 def menu():
     print("-"*22)
     print("|"," "*((10//2)-3),"1"," "*((10//2)-3),"|","DIAMON"," ","|")
@@ -21,16 +23,58 @@ def forloops_apps():
         exit()
 
 def nestedloops_apps():
+    # Fizzbuzz script
+    n = int(input("Masukan jumlah panjang loops pertama: "))
+
+    result = []
+
+    for i in range(n):
+        if i % 1 == 0 and i % 3 == 0:
+            print("FizzBuzz")
+        elif i % 1 == 0:
+            print("Fizz")
+        elif i % 3 == 0:
+            print("Buzz")
+        else:
+            print(i)
+        for y in range(n):
+            if y % 3 == 0 and y % 5 == 0:
+                print("FizzBuzz")
+            elif y % 3 == 0:
+                print("Fizz")
+            elif y % 5 == 0:
+                print("Buzz")
+            else:
+                print(i)
+
+def random_number_guessing():
+    numbers = []
+    for i in range(5):
+        number = int(input("Masukan angka acak: "))
+        numbers.append(number)
+    
+    random_number = random.choice(numbers)
+
+    for i in range(3):
+        geussing_number = int(input("Masukan angka tebakan anda: "))
+        if geussing_number == random_number:
+            print("Tebakan Anda Benar!!!")
+            break
+        else:
+            print("Tebakan anda Salah, Silahkan Coba Lagi")
     
 
 def main():
     print("1. Forloops Apps")
     print("2. Nestedloops Apps")
+    print("3. Random Number Guessing Apps")
     apps = int(input("Pilih Aplikasi Yang Ingin Digunakan: "))
     if apps == 1:
         forloops_apps()
     elif apps == 2:
         nestedloops_apps()
+    elif apps == 3:
+        random_number_guessing()
     else:
         print("Input tidak valid! Pilih (1/2)")
 
