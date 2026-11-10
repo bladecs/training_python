@@ -1,0 +1,14 @@
+[
+    {
+        "nama": "Mengerjakan coding python",
+        "selesai": true
+    },
+    {
+        "nama": "Membuat desain robot",
+        "selesai": false
+    },
+    {
+        "nama": "Uji coba desain robot",
+        "selesai": false
+    }
+]
